@@ -419,18 +419,18 @@ void loadimage()
 	playerright = newimage();
 	tree = newimage();
 	wall = newimage();
-	getimage(fire, "fire.png", MaxW / width, MaxH / height);
-	getimage(grass, "grass.png", MaxW / width, MaxH / height);
-	getimage(p, "p.png", MaxW / width, MaxH / height);
-	getimage(playerbehind, "playerbehind.png", MaxW / width, MaxH / height);
-	getimage(playerfront, "playerfront.png", MaxW / width, MaxH / height);
-	getimage(playerleft, "playerleft.png", MaxW / width, MaxH / height);
-	getimage(playerright, "playerright.png", MaxW / width, MaxH / height);
-	getimage(tree, "tree.png", MaxW / width, MaxH / height);
-	getimage(wall, "wall.png", MaxW / width, MaxH / height);
-	getimage(win, "win.png");
-	getimage(lose, "lose.png");
-	getimage(start, "start.png");
+	getimage(fire, "..//assert/fire.png", MaxW / width, MaxH / height);
+	getimage(grass, "..//assert/grass.png", MaxW / width, MaxH / height);
+	getimage(p, "..//assert/p.png", MaxW / width, MaxH / height);
+	getimage(playerbehind, "..//assert/playerbehind.png", MaxW / width, MaxH / height);
+	getimage(playerfront, "..//assert/playerfront.png", MaxW / width, MaxH / height);
+	getimage(playerleft, "..//assert/playerleft.png", MaxW / width, MaxH / height);
+	getimage(playerright, "..//assert/playerright.png", MaxW / width, MaxH / height);
+	getimage(tree, "..//assert/tree.png", MaxW / width, MaxH / height);
+	getimage(wall, "..//assert/wall.png", MaxW / width, MaxH / height);
+	getimage(win, "..//assert/win.png");
+	getimage(lose, "..//assert/lose.png");
+	getimage(start, "..//assert/start.png");
 }
 void drawall()
 {

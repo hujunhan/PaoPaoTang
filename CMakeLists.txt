@@ -1,6 +1,24 @@
 cmake_minimum_required(VERSION 3.14)
 project(PaoPaoTang)
-
 set(CMAKE_CXX_STANDARD 11)
+set (Tutorial_VERSION_MAJOR 1)
+set (Tutorial_VERSION_MINOR 0)
+include_directories("include")
+file(GLOB LINK_DIRS ${CMAKE_CURRENT_LIST_DIR}/lib/ege/graphics1764.lib)
+file(GLOB CLIENT_SOURCE ${CMAKE_CURRENT_LIST_DIR}/src/ppt_client.cpp)
+file(GLOB SERVER_SOURCE ${CMAKE_CURRENT_LIST_DIR}/src/ppt_server.cpp)
 
-add_executable(PaoPaoTang main.cpp)
+add_executable(server ${SERVER_SOURCE})
+add_executable(client ${CLIENT_SOURCE})
+if ( MSVC )
+    set_target_properties( server PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin )
+    set_target_properties( server PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_LIST_DIR}/bin )
+    set_target_properties( server PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_LIST_DIR}/bin )
+    set_target_properties( client PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin )
+    set_target_properties( client PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_LIST_DIR}/bin )
+    set_target_properties( client PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_LIST_DIR}/bin )
+endif ( MSVC )
+
+
+target_link_libraries(server ${LINK_DIRS})
+target_link_libraries(client ${LINK_DIRS})
