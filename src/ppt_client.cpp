@@ -92,7 +92,7 @@ int online()
 	char* myip;
 	char ip[100];
 	myip = ip;
-	printf("ip:");
+	printf("Type the server's IP Address:");
 	scanf("%s", myip);
 	sockaddr_in serAddr;
 	serAddr.sin_family = AF_INET;
